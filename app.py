@@ -1,17 +1,17 @@
 from dotenv import load_dotenv
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
 load_dotenv()
 
-model = GoogleGenerativeAI(model="gemini-2.5-flash-lite")
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
 
 resp1 = model.invoke("We are building an AI system for processing medical insurance claims?")
-print(f"First Response ------{resp1}")
+print(f"First Response ------{resp1.content}")
 
 print("========================================")
 resp2 = model.invoke("What are the main risks in this system?")
-print(f"Second Response ------{resp2}")
+print(f"Second Response ------{resp2.content}")
 
 # Explanation:
 # The second question may fail or behave inconsistently without conversation history because LLMs are stateless by design/nature.
@@ -25,7 +25,7 @@ messages = [
 ]
 
 contextual_response = model.invoke(messages)
-print(f"Context aware response ------{contextual_response}")
+print(f"Context aware response ------{contextual_response.content}")
 
 
 """
