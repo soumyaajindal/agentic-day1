@@ -13,6 +13,14 @@ It shows how missing conversation history leads to context failure and how messa
 ## 🔐 Environment Setup
 This project uses Google Generative AI. Set your API key (GOOGLE_API_KEY) as an environment variable:
 
+## 🔒 Security Note
+
+- Do **NOT** commit your `.env` file to the repository.
+- The `.env` file contains sensitive information such as API keys.
+
+### ✅ Best Practices
+- Add `.env` to your `.gitignore` file
+
 ### Install Dependencies
 
 pip install -r requirements.txt
