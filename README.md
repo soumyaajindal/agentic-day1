@@ -6,8 +6,9 @@ It shows how missing conversation history leads to context failure and how messa
 ---
 
 ## 📁 Project Structure
-app.py
-requirements.txt
+.
+├── app.py
+└── README.md
 
 ## 🔐 Environment Setup
 This project uses Google Generative AI. Set your API key (GOOGLE_API_KEY) as an environment variable:
